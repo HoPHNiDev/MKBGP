@@ -1,0 +1,31 @@
+{% load static %}
+{% load news_extras %}
+{% load i18n %}
+{% get_last_article as articles %}
+{% if articles %}
+<section class="news news__homepage">
+    <div class="news__container">
+        <div class="news__content">
+            <h3 class="news__title">{% trans 'Новости и важные события' %}</h3>
+            <div class="news__block">
+                {% for article in articles %}
+                <div class="news__card news-card">
+                    <div class="news-card__img">
+                        <img src="{{ article.photo.url }}" alt="">
+                    </div>
+                    <div class="news-card__description">
+                        <p class="news-card__type">{{ article.article_type }}</p>
+                        <p class="news-card__date"><span><img src="{% static 'img/news/date.svg' %}"
+                                    alt="Date"></span>{{ article.created_at|date:"d" }}.{{ article.created_at|date:"m" }}.{{ article.created_at|date:"Y" }}</p>
+                        <h4 class="news-card__title">{{ article.title }}</h4>
+                        <div class="news-card__text">{{ article.anons }}</div>
+                        <a href="{% url 'news_view' article.slug %}" class="news-card__button">{% trans 'Читать' %}</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <a href="{% url 'news' %}" class="news__button">{% trans 'Читать ещё' %}</a>
+        </div>
+    </div>
+</section>
+{% endif %}

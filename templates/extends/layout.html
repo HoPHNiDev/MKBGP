@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+{% load main_extras %}
+{% load news_extras %}
+{% load products_extras %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+{% article_or_not request.path LANGUAGE_CODE as news_or_not %}
+{% product_or_not request.path LANGUAGE_CODE as product_or_not %}
+{% if news_or_not %}
+    {% get_article_slug request.path LANGUAGE_CODE as url %}
+{% elif product_or_not %}
+    {% get_product_slug request.path LANGUAGE_CODE as url %}
+{% else %}
+    {% split_url request.path LANGUAGE_CODE as url %}
+{% endif %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %} ">
+    
+    {% block css %}
+        
+    {% endblock css %}
+        
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>MKBGP | {% block title %} {% endblock title %}</title>
+</head>
+
+<body>
+    <div class="preloader" id="preloader">
+        <div class="loading"></div>
+    </div>
+    <div class="wrapper">
+        <header class="header" id="header">
+            <div class="header__wrapper">
+        
+                <nav class="header__nav nav">
+                    <div class="nav__container">
+                        <div class="nav__content">
+                            <a href="#" class="nav__logo">
+                                <img src="{% static 'img/logo2.png' %}" alt="">
+                            </a>
+                            {% with request.resolver_match.url_name as url_name %}
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="{% url 'home' %}" class="nav__link nav__text{% if url_name == 'home' %} active{% endif %}">{% trans 'Главная' %}</a></li>
+                                <li class="nav__item"><a href="{% url 'products' %}" class="nav__link nav__text{% if url_name == 'products' %} active{% endif %}">{% trans 'Продукция' %}</a></li>
+                                <li class="nav__item"><a href="{% url 'about' %}" class="nav__link nav__text{% if url_name == 'about' %} active{% endif %}">{% trans 'О нас' %}</a></li>
+                                <li class="nav__item"><a href="{% url 'news' %}" class="nav__link nav__text{% if url_name == 'news' %} active{% endif %}">{% trans 'Новости' %}</a></li>
+                                <li class="nav__item"><a href="{% url 'contacts' %}" class="nav__link nav__text{% if url_name == 'contacts' %} active{% endif %}">{% trans 'Контакты' %}</a>
+                                </li>
+                            </ul>
+                            {% endwith %}
+                            {% for language in languages %}
+                                {% if language.code != LANGUAGE_CODE %}
+                                    <a href="/{{ language.code }}/{{ url }}" class="nav__language __text">
+                                        <img src="{% static 'img/language.svg' %}" alt="language">
+                                        {{language.name_local}}
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+        
+                    </div>
+                    <div class="nav__mobile nav-mobile" id="mobile-menu">
+                        <div class="nav-mobile__nav">
+                            <button class="nav-mobile__burger" id="burger">
+                                <img src="{% static 'img/burger-menu.svg' %}" alt="burger-menu">
+                            </button>
+                            <a href="#" class="nav-mobile__logo">
+                                <img src="{% static 'img/logo2.png' %}" alt="">
+                            </a>
+                            {% for language in languages %}
+                                {% if language.code != LANGUAGE_CODE %}
+                                    <a href="/{{ language.code }}/{{ url }}" class="nav__language __text">
+                                        <img src="{% static 'img/language.svg' %}" alt="language">
+                                        {{ language.code | upper }}
+                                        <p style='display:none;' id='language-code'>{{ LANGUAGE_CODE }}</p>
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <ul class="nav-mobile__list">
+                            <li class="nav-mobile__item"><a href="{% url 'home' %}"
+                                    class="nav-mobile__link nav-mobile__text">{% trans 'Главная' %}</a></li>
+                            <li class="nav-mobile__item"><a href="{% url 'home' %}"
+                                    class="nav-mobile__link nav-mobile__text">{% trans 'Продукция' %}</a></li>
+                            <li class="nav-mobile__item"><a href="{% url 'about' %}" class="nav-mobile__link __text">{% trans 'О нас' %}</a></li>
+                            <li class="nav-mobile__item"><a href="{% url 'news' %}"
+                                    class="nav-mobile__link nav-mobile__text">{% trans 'Новости' %}</a></li>
+                            <li class="nav-mobile__item"><a href="{% url 'contacts' %}"
+                                    class="nav-mobile__link nav-mobile__text">{% trans 'Контакты' %}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="header__intro intro">
+                    <div class="intro__content">
+                        <p class="intro__company">{% block page %} {% endblock page %}</p>
+                        <h1 class="intro__title intro__titlerev">
+                            {% block header_title %} {% endblock header_title %}
+                        </h1>
+                        {% block header_scroll %}{% endblock header_scroll %}
+                    </div>
+                </div>
+            </div>
+        
+        </header>
+        
+        <main class="main">
+            
+            {% block content %}
+                
+            {% endblock content %}
+                
+        </main>
+
+        {% include 'includes/footer.html' %}
+        {% include 'includes/form.html' %}
+    </div>
+    <script src="{% static 'js/jquery-min.js' %}"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mask.min.js' %}"></script>
+    {% block js %} {% endblock js %}
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

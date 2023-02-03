@@ -1,0 +1,27 @@
+{% load static %}
+{% load products_extras %}
+{% load i18n %}
+{% get_products as products %}
+{% if products %}
+<section class="products homePage" id="products">
+    <div class="products__container">
+        <div class="products__content">
+            <h2 class="products__title">{% trans 'Наша продукция' %}</h2>
+            <div class="products__block">
+                {% for product in products %}
+                <a href="{% if product.hasDescription %}{% url 'products_view' product.slug %}{% else %}#{% endif %}" class="products__card">
+                    <div class="products__img">
+                        <img src="{{ product.photo.url }}" alt="">
+                    </div>
+                    <div class="products__description">
+                        <h3 href="#" class="products__card-title">{{ product.title }}</h3>
+                        <p class="products__text">{{ product.anons }}</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+            <a href="{% url 'products' %}" class="products__button">{% trans 'Посмотреть всю продукцию' %}</a>
+        </div>
+    </div>
+</section>
+{% endif %}

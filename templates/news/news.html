@@ -1,0 +1,43 @@
+{% extends 'extends/layout.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %} {% trans 'Новости' %} {% endblock title %}
+{% block page %} <a href="{% url 'home' %}">{% trans 'Главная' %}</a> <span class='intro__point'> </span><a href="{% url 'news' %}">{% trans 'Новости' %}</a>{% endblock page %} 
+{% block header_title %} {% trans 'Новости' %} {% endblock header_title %}
+        
+        
+{% block content %}
+<section class="news">
+    <div class="news__container">
+        <div class="news__content">
+            <h3 class="news__title">{% trans 'Новости и важные события' %}</h3>
+            <div class="news__block">
+                {% for article in news %}
+                    {% if news %}
+                    <div class="news__card news-card">
+                        <div class="news-card__img">
+                            <img src="{{ article.photo.url }}" alt="">
+                        </div>
+                        <div class="news-card__description">
+                            <p class="news-card__type">{{ article.article_type }}</p>
+                            <p class="news-card__date"><span><img src="{% static 'img/news/date.svg' %}"
+                                        alt="Date"></span>{{ article.created_at|date:"d" }}.{{ article.created_at|date:"m" }}.{{ article.created_at|date:"Y" }}</p>
+                            <h4 class="news-card__title">{{ article.title }}</h4>
+                            <p class="news-card__text">{{ article.anons }}</p>
+                            <a href="{% url 'news_view' article.slug %}" class="news-card__button">{% trans 'Читать' %}</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            
+            {% if news_status %}
+                <button class="news__button" id='news__download' all="{{ count }}">{% trans 'Загрузить ещё' %}</button>
+            {% endif %}
+                
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+            

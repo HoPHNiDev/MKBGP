@@ -1,0 +1,2053 @@
+/***************************************
+========================================
+
+	Author Name   : HoPHNi (Shokhjahon Khamraev)
+	Github: https://github.com/HoPHNiDev
+
+****************************************
+=======================================/
+
+
+/* ----------------------------------------------------------------
+
+ ==> Table Of Content
+
+	01. Normalize
+	02. Reset
+	03. Global
+	04. Fonts
+	05. Header
+		------- Main --------
+		06. Products Section 
+		07. Clients Section
+		08. Partners Section
+		09. Form Section
+		10. About Section
+		11. Contacts Section
+		12. News Section
+		------- Main --------
+	13. Footer Css Area
+	14. Preloader
+
+---------------------------------------------------------------- */
+/* ==========================================================================
+01. Normilize CSS Area Start
+========================================================================== */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+01. Normilize CSS Area End
+========================================================================== */
+/* ==========================================================================
+02. Reset CSS Area Start
+========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ==========================================================================
+02. Reset CSS Area End
+========================================================================== */
+/* ==========================================================================
+03. Global CSS Area Start
+========================================================================== */
+[class*="__container"] {
+  max-width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
+}
+
+@media (max-width: 77.5em) {
+  [class*="__container"] {
+    padding: 0 15px;
+  }
+}
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+[class*="__title"] {
+  font-size: 3.1rem;
+  line-height: 3.6875rem;
+  color: var(--title-color);
+  position: relative;
+  text-align: center;
+}
+
+[class*="__title"]:after {
+  content: url(../img/title-bottom.svg);
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  left: calc(50% - 8px);
+}
+
+[class*="__titlerev"] {
+  font-size: 3.1rem;
+  line-height: 3.6875rem;
+  color: var(--title-color-rev);
+  position: relative;
+  text-align: center;
+}
+
+[class*="__titlerev"]:after {
+  content: url(../img/title-bottom-white.svg);
+  display: block;
+  position: absolute;
+  bottom: -50px;
+  left: calc(50% - 8px);
+}
+
+[class*="__text"] {
+  font-size: 1.175rem;
+  line-height: 1.575rem;
+  color: var(--text-color);
+}
+
+[class*="__textrev"] {
+  font-size: 1.175rem;
+  line-height: 1.575rem;
+  color: var(--text-color-rev);
+}
+
+[class*="__button"] {
+  font-size: 0.9375rem;
+  line-height: 200%;
+  background-color: var(--color-blue);
+  padding: 15px 40px;
+  color: var(--color-white);
+  border-radius: 10px;
+  margin: 30px auto 0;
+  transition: all 0.4s;
+  display: block;
+  cursor: pointer;
+}
+
+[class*="__button"]:hover {
+  box-shadow: 0px 0px 5px 5px rgba(58, 104, 255, 0.4);
+  transition: all 0.4s;
+}
+
+@media (max-width: 62em) {
+  [class*="__title"] {
+    font-size: 2.1rem;
+    line-height: 2.6875rem;
+  }
+  [class*="__titlerev"] {
+    font-size: 2.1rem;
+    line-height: 2.6875rem;
+  }
+}
+@media (max-width: 31.25em) {
+  [class*="__title"] {
+    font-size: 1.8rem;
+    line-height: 2.3875rem;
+  }
+  [class*="__titlerev"] {
+    font-size: 1.8rem;
+    line-height: 2.3875rem;
+  }
+  [class*="__button"] {
+    padding: 15px 25px;
+  }
+}
+@media (max-width: 20em) {
+  [class*="__title"] {
+    font-size: 1.5rem;
+    line-height: 2.0875rem;
+  }
+  [class*="__titlerev"] {
+    font-size: 1.5rem;
+    line-height: 2.0875rem;
+  }
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --main-color: #000;
+  --main-color-rev: #fff;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: rgb(36, 36, 36);
+  --color-gray-alpha: rgba(14, 14, 14, 0.8);
+  --color-blue: rgb(0, 152, 253);
+  --title-color: rgb(15, 20, 30);
+  --title-color-rev: rgb(255, 255, 255);
+  --text-color: rgb(230, 230, 230);
+  --text-color-rev: rgb(46, 46, 46);
+  --nav-hover: rgb(150, 150, 150);
+}
+.scroll-top {
+  position: fixed;
+  z-index: 4;
+  bottom: 20px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-gray-alpha);
+  padding: 15px;
+}
+
+.request-call {
+  position: fixed;
+  z-index: 4;
+  bottom: 20px;
+  left: 50px;
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  padding: 15px;
+  background-color: transparent;
+}
+.request-call::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #0e0f0f;
+  z-index: 1;
+}
+.request-call img {
+  position: relative;
+  z-index: 2;
+}
+.request-call:hover {
+  transform: rotate(360deg) scale(1.2);
+  transition: 0.5s ease-in-out;
+}
+.request-call::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(101, 101, 101, 0.6);
+  z-index: -1;
+  opacity: 1;
+  animation: circle-wives 4s linear 3s infinite;
+}
+@keyframes circle-wives {
+  50% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+@media (max-width: 77.5em) {
+  .contact-link,
+  .scroll-top {
+    position: static;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+  .request-call {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+  .request-call::after {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 31.25em) {
+  .scroll-top,
+  .request-call {
+    position: absolute !important;
+  }
+  .scroll-top {
+    right: 0;
+    bottom: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+  }
+  .request-call {
+    left: 0;
+    bottom: calc(50% - 20px);
+  }
+}
+/* ==========================================================================
+03. Global CSS Area End
+========================================================================== */
+/* ==========================================================================
+04. Fonts CSS Area Start
+========================================================================== */
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100;
+  src: url(../fonts/Montserrat/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  src: url(../fonts/Montserrat/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  src: url(../fonts/Montserrat/Montserrat-Black.ttf);
+}
+/* ==========================================================================
+04. Fonts CSS Area End
+========================================================================== */
+/* ==========================================================================
+05. Header CSS Area Start
+========================================================================== */
+.header {
+  background: url(../img/bg.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+}
+.header__wrapper {
+  background-color: var(--color-gray-alpha);
+  padding: 30px 0;
+}
+.header .nav__logo img {
+  height: 110px;
+}
+.header .nav {
+  padding: 10px 0;
+}
+.header .nav__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.header .nav .active {
+  color: var(--color-blue);
+}
+.header .nav__link {
+  display: flex;
+  gap: 0.1875rem;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.header .nav__item:hover .nav__link {
+  color: var(--color-blue);
+  transition: color 0.5s ease;
+}
+.header .nav__burger {
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: inherit;
+  display: none;
+}
+.header .nav__language {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.header .nav__language img {
+  width: 30px;
+}
+.header .nav__mobile {
+  display: none;
+}
+@media (max-width: 62em) {
+  .header .nav__content {
+    display: none;
+  }
+  .header .nav-mobile {
+    display: block;
+  }
+  .header .nav-mobile__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1001;
+    padding: 0 20px;
+    position: relative;
+  }
+  .header .nav-mobile__burger {
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+  .header .nav-mobile__logo img {
+    height: 90px;
+  }
+  .header .nav-mobile__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    top: -100%;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-gray);
+    padding-top: 100px;
+    transition: top 0.5s ease;
+    position: fixed;
+  }
+  .header .nav-mobile__link {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.25em;
+  }
+  .header .nav-mobile__language {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+.header .intro {
+  padding: 30px 0;
+}
+.header .intro__content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.header .intro__title {
+  max-width: 80%;
+  text-transform: uppercase;
+  text-align: center;
+}
+.header .intro__title::after {
+  content: "";
+}
+.header .intro__company {
+  padding-top: 20px;
+  font-weight: 900;
+  font-size: 1.5625rem;
+  color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .intro__company a {
+  color: var(--color-blue);
+}
+.header .intro__point {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-blue);
+}
+@media (max-width: 62em) {
+  .header .intro__company {
+    font-size: 1.375em;
+  }
+}
+@media (max-width: 48em) {
+  .header .intro__company {
+    font-size: 1.275em;
+  }
+}
+@media (max-width: 31.25em) {
+  .header .intro__company {
+    font-size: 1.175em;
+  }
+}
+.header .intro-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.header .intro-scroll__content {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  -webkit-animation: reveal 1s ease-out 1.5s backwards;
+  animation: reveal 1s ease-out 1.5s backwards;
+}
+.header .intro-scroll__line {
+  height: 100px;
+  width: 2px;
+  background-color: var(--text-color);
+}
+.header .intro-scroll__text {
+  -webkit-animation: scroll-text-move 8s ease-in-out infinite;
+  animation: scroll-text-move 8s ease-in-out infinite;
+  font-size: 1rem;
+}
+.header .intro-scroll__text_1 {
+  -webkit-animation-delay: 3.0725s;
+  animation-delay: 3.0725s;
+}
+.header .intro-scroll__text_2 {
+  -webkit-animation-delay: 3.145s;
+  animation-delay: 3.145s;
+}
+.header .intro-scroll__text_3 {
+  -webkit-animation-delay: 3.2175s;
+  animation-delay: 3.2175s;
+}
+.header .intro-scroll__text_4 {
+  -webkit-animation-delay: 3.29s;
+  animation-delay: 3.29s;
+}
+.header .intro-scroll__text_5 {
+  -webkit-animation-delay: 3.3625s;
+  animation-delay: 3.3625s;
+}
+.header .intro-scroll__text_6 {
+  -webkit-animation-delay: 3.435s;
+  animation-delay: 3.435s;
+}
+.header .intro-scroll__mouse {
+  width: 20px;
+  height: 30px;
+  border: 2px solid var(--text-color);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.25s;
+  position: relative;
+}
+.header .intro-scroll__mouse::after {
+  content: "";
+  height: 5px;
+  width: 3px;
+  background-color: var(--text-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5px;
+  -webkit-animation: mouse-move infinite alternate 0.8s ease-in;
+  animation: mouse-move infinite alternate 0.8s ease-in;
+}
+@-webkit-keyframes mouse-move {
+  0% {
+    top: 5px;
+  }
+  100% {
+    top: 15px;
+  }
+}
+@keyframes mouse-move {
+  0% {
+    top: 5px;
+  }
+  100% {
+    top: 15px;
+  }
+}
+@-webkit-keyframes scroll-text-move {
+  0%,
+  10% {
+    transform: none;
+    opacity: 1;
+    color: #919795;
+  }
+  1%,
+  8% {
+    transform: translateY(-2px);
+    color: var(--fill);
+  }
+  4% {
+    transform: translateY(3px);
+    opacity: 1;
+    color: #919795;
+  }
+}
+@keyframes scroll-text-move {
+  0%,
+  10% {
+    transform: none;
+    opacity: 1;
+    color: #919795;
+  }
+  1%,
+  8% {
+    transform: translateY(-2px);
+    color: var(--fill);
+  }
+  4% {
+    transform: translateY(3px);
+    opacity: 1;
+    color: #919795;
+  }
+}
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.fixed .nav {
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+  background-color: rgba(14, 14, 14, 0.9);
+  width: 100%;
+}
+
+.fixed .header__intro {
+  margin-top: 135px;
+}
+
+@media (max-width: 62em) {
+  .fixed .nav {
+    position: static;
+  }
+  .fixed .nav-mobile__nav {
+    position: fixed;
+    top: 0;
+    z-index: 1002;
+    background-color: var(--color-gray);
+    width: 100%;
+  }
+  .header .active .nav-mobile__list {
+    top: 0;
+    transition: top 0.5s ease;
+  }
+}
+/* ==========================================================================
+05. Header CSS Area End
+========================================================================== */
+/* ==========================================================================
+06. Products Section CSS Area Start
+========================================================================== */
+.products {
+  padding: 40px 0;
+}
+.products__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.products__title {
+  margin-bottom: 60px;
+}
+.products__block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+}
+.products__card {
+  width: calc(33.3333333333% - 30px);
+  padding: 10px 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.8s;
+}
+.products__card:hover {
+  box-shadow: 0px 4px 5px 2px rgba(14, 14, 51, 0.3);
+  transition: all 0.8s;
+}
+.products__card:hover .products__img img {
+  transform: scale(120%);
+  transition: all 0.8s;
+}
+.products__img {
+  width: 100%;
+  overflow: hidden;
+}
+.products__img img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s;
+}
+.products__description {
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.products__card-title {
+  margin: 25px 0 5px;
+  line-height: 38px;
+  font-size: 1.25rem;
+  color: var(--color-gray);
+  font-weight: 600;
+  text-align: center;
+}
+.products__text {
+  color: #737373;
+  font-size: 0.875rem;
+  line-height: 1.875rem;
+  text-align: justify;
+}
+.products__button {
+  border: none;
+  outline: none;
+}
+
+.homePage .products__card:nth-child(4) {
+  display: none;
+}
+
+@media (max-width: 62em) {
+  .products__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .products__card {
+    width: 100%;
+  }
+  .homePage .products__card:last-child {
+    display: flex;
+  }
+}
+@media (max-width: 37.5em) {
+  .products__block {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .products__card {
+    width: 100%;
+  }
+  .homePage .products__card:last-child {
+    display: flex;
+  }
+}
+.products-detail {
+  padding: 40px 0;
+}
+.products-detail__title {
+  font-size: 2.175em;
+  line-height: 1.675em;
+}
+.products-detail__title::after {
+  display: none;
+}
+.products-detail__block {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+.products-detail__left {
+  flex: 1;
+}
+.products-detail__tabs {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--color-gray);
+  padding-bottom: 20px;
+}
+.products-detail__tab {
+  font-size: 1.075em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.products-detail__tab-active {
+  color: var(--color-blue);
+}
+.products-detail__description {
+  display: none;
+}
+.products-detail__description .photo-collage {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.products-detail__description .photo-collage img {
+  width: calc(25% - 30px);
+}
+.products-detail__details {
+  display: none;
+}
+.products-detail__activeTab {
+  display: block;
+}
+.products-detail__right {
+  flex: 0 0 30%;
+}
+.products-detail__img {
+  width: 100%;
+}
+.products-detail__img img {
+  width: 100%;
+}
+.products-detail__anons {
+  font-size: 1.075em;
+  line-height: 1.575em;
+  margin: 20px 0;
+}
+.products-detail__category {
+  font-size: 1.075em;
+}
+.products-detail__category span {
+  font-weight: 600;
+}
+
+@media (max-width: 62em) {
+  .products-detail__block {
+    flex-direction: column-reverse;
+  }
+  .products-detail__anons {
+    display: none;
+  }
+  .products-detail__right {
+    flex: 0 0 0%;
+  }
+  .products-detail__category {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+  }
+  .products-detail__img {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 48em) {
+  .products-detail__title {
+    font-size: 1.675em;
+    line-height: 1.575em;
+  }
+  .products-detail__description .photo-collage {
+    gap: 20px;
+  }
+  .products-detail__description .photo-collage img {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 31.25em) {
+  .products-detail__title {
+    font-size: 1.475em;
+    line-height: 1.575em;
+  }
+}
+
+/* ==========================================================================
+06. Products Section CSS Area End
+========================================================================== */
+/* ==========================================================================
+07. Clients Section CSS Area Start
+========================================================================== */
+.clients {
+  background: url(../img/main/clients/clients__bg.jpg) no-repeat center/cover;
+  background-attachment: fixed;
+}
+.clients__wrapper {
+  background-color: var(--color-gray-alpha);
+  padding: 30px 0;
+}
+.clients__content {
+  gap: 30px;
+}
+.clients__titlerev {
+  margin-bottom: 60px;
+  font-size: 2.1rem;
+  line-height: 2.6875rem;
+}
+.clients__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.875rem;
+}
+.clients__item {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.clients__img {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.clients__img-first::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-left: 2px solid rgb(235, 235, 235);
+  border-right: 2px solid var(--color-blue);
+  border-top: 2px solid rgb(235, 235, 235);
+  border-bottom: 2px solid rgb(235, 235, 235);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+.clients__img-second::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-left: 2px solid var(--color-blue);
+  border-right: 2px solid var(--color-blue);
+  border-top: 2px solid rgb(235, 235, 235);
+  border-bottom: 2px solid var(--color-blue);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+.clients__img-third::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-left: 2px solid var(--color-blue);
+  border-right: 2px solid var(--color-blue);
+  border-top: 2px solid var(--color-blue);
+  border-bottom: 2px solid var(--color-blue);
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+.clients__img img {
+  width: 100px;
+}
+.clients__text {
+  text-align: center;
+}
+.clients__button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 48em) {
+  .clients__body {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .clients__item {
+    width: calc(50% - 20px);
+  }
+}
+@media (max-width: 34.375em) {
+  .clients__titlerev {
+    font-size: 1.675em;
+  }
+  .clients__item {
+    width: 100%;
+  }
+}
+/* ==========================================================================
+07. Clients Section CSS Area End
+========================================================================== */
+/* ==========================================================================
+08. Partners Section CSS Area Start
+========================================================================== */
+.partners {
+  padding: 40px 0 60px;
+}
+.partners__subtitle {
+  color: #737373;
+  font-size: 0.875rem;
+  line-height: 1.875rem;
+  text-align: center;
+  width: 80%;
+  margin: 70px auto;
+}
+.partners__subtitle span {
+  font-weight: 600;
+}
+
+.swiper__company {
+  border-radius: 10px;
+  border: 1px solid var(--color-gray-alpha);
+  background-color: var(--nav-hover);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper__company img {
+  width: 70%;
+}
+
+@media (max-width: 31.25em) {
+  .partners__subtitle {
+    text-align: justify;
+  }
+}
+/* ==========================================================================
+08. Partners Section CSS Area End
+========================================================================== */
+/* ==========================================================================
+09. FORM Section CSS Area Start
+========================================================================== */
+.form {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 0 20px;
+  transition: all 0s;
+}
+.form__active {
+  z-index: 1002;
+  opacity: 1;
+  transition: opacity 0.4s;
+  transition: z-index 0s;
+}
+.form__wrapper {
+  padding: 40px;
+  background-color: var(--color-gray-alpha);
+  border-radius: 20px;
+  position: relative;
+  max-width: 550px;
+  width: 100%;
+}
+.form__close {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  cursor: pointer;
+}
+.form__title {
+  color: var(--color-white);
+  font-size: 2.475rem;
+  line-height: 2.975rem;
+  font-weight: 700;
+}
+.form__title::after {
+  display: none;
+}
+.form__text {
+  color: var(--nav-hover);
+  font-size: 1.075rem;
+  line-height: 1.575rem;
+  text-align: center;
+}
+.form__info {
+  display: none;
+  text-align: center;
+  font-size: 1.075rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.form__body {
+  margin-top: 20px;
+}
+.form__input:nth-of-type(1) {
+  margin-bottom: 15px;
+}
+.form__input label {
+  color: var(--color-white);
+  font-size: 1.075rem;
+  line-height: 1.575rem;
+}
+.form__input-body {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  margin-top: 5px;
+}
+.form__input-body span {
+  height: 100%;
+  width: 50px;
+  background-color: var(--color-white);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form__input-body input {
+  height: 100%;
+  width: calc(100% - 50px);
+  background-color: var(--color-white);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+}
+.form__button {
+  outline: none;
+  border: none;
+  padding: 10px 30px;
+  margin: 40px auto 0;
+}
+
+.form-we {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.form-we__title {
+  color: var(--color-white);
+  font-size: 2.475rem;
+  line-height: 2.975rem;
+  margin-bottom: 10px;
+}
+.form-we__title::after {
+  display: none;
+}
+.form-we__contact {
+  color: var(--color-white);
+  font-size: 0.975rem;
+  line-height: 1.475rem;
+}
+.form-we__contact a {
+  color: var(--nav-hover);
+}
+.form-we__or {
+  color: var(--color-blue);
+  font-weight: 600;
+  font-size: 1.175rem;
+  line-height: 1.675rem;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+09. FORM Section CSS Area End
+========================================================================== */
+/* ==========================================================================
+10. About Section CSS Area Start
+========================================================================== */
+.about {
+  padding: 30px 0;
+}
+.about__container {
+  padding: 0 120px;
+}
+.about__body {
+  display: flex;
+}
+.about__content {
+  max-width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.about__text {
+  color: var(--color-gray);
+  text-align: justify;
+  line-height: 1.175em;
+  font-weight: 600;
+}
+.about__listitle {
+  font-size: 1.175rem;
+  line-height: 1.575rem;
+  color: var(--color-gray);
+  margin-top: 30px;
+  font-weight: 600;
+}
+.about__list {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 10px;
+  padding-left: 20px;
+}
+.about__item {
+  list-style: circle;
+}
+
+@media (max-width: 62em) {
+  .about__container {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 48em) {
+  .about__body {
+    flex-direction: column;
+  }
+  .about__content {
+    max-width: 100%;
+  }
+}
+/* ==========================================================================
+10. About Section CSS Area End
+========================================================================== */
+/* ==========================================================================
+11. Contacts Section CSS Area Start
+========================================================================== */
+.contacts {
+  padding: 50px 0;
+}
+.contacts__container {
+  padding: 0 100px;
+}
+.contacts__content {
+  display: flex;
+  gap: 50px;
+  height: 450px;
+}
+.contacts__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 30%;
+}
+.contacts__title {
+  font-size: 2.1rem;
+  line-height: 2.6875rem;
+}
+.contacts__title::after {
+  content: none;
+}
+.contacts__item {
+  display: flex;
+  align-items: center;
+  color: var(--color-gray);
+  gap: 10px;
+}
+.contacts__map {
+  flex: 1 1 70%;
+}
+
+@media (max-width: 62em) {
+  .contacts__container {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 48em) {
+  .contacts__content {
+    flex-direction: column;
+    height: 800px;
+  }
+  .contacts__body {
+    flex: 1 1 0;
+  }
+  .contacts__map {
+    flex: 1 1 100%;
+    min-height: 300px;
+  }
+}
+/* ==========================================================================
+11. Contacts Section CSS Area End
+========================================================================== */
+/* ==========================================================================
+12. News Section CSS Area Start
+========================================================================== */
+.news {
+  padding: 40px 0;
+}
+.news__title {
+  margin-bottom: 50px;
+}
+.news__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.news__button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  outline: none;
+  border: none;
+}
+.news-card {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.news-card__img {
+  flex: 1 1 40%;
+  overflow: hidden;
+}
+.news-card__img img {
+  height: 100%;
+  width: 100%;
+}
+.news-card__description {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+.news-card__type {
+  color: var(--color-blue);
+  font-weight: 600;
+  font-size: 1.075em;
+  line-height: 1.275em;
+}
+.news-card__date {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.news-card__title {
+  font-size: 1.375em;
+  line-height: 1.675em;
+  text-align: left;
+}
+.news-card__title::after {
+  display: none;
+}
+.news-card__text {
+  font-size: 1.075em;
+  line-height: 1.375em;
+  color: var(--color-gray);
+  text-align: justify;
+}
+.news-card__button {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 0 0 0;
+  padding: 10px 40px;
+}
+
+.news-page {
+  padding: 40px 0;
+  max-width: 800px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.news-page__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.news-page__title {
+  font-size: 2.175em;
+  line-height: 1.375em;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.news-page__title::after {
+  display: none;
+}
+.news-page__text {
+  text-align: justify;
+  color: var(--color-gray);
+}
+.news-page__img {
+  width: 100%;
+  margin-top: 30px;
+}
+.news-page__img img {
+  width: 100%;
+}
+.news-page__share {
+  margin-top: 20px;
+}
+.news-page__share-title {
+  margin-bottom: 10px;
+  font-size: 1.075em;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+.news-page__social {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.news-page__link {
+  transition: transform 0.3s ease;
+}
+.news-page__item:hover .news-page__link {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+.news-page__item a img {
+  transform: scale(0.8);
+}
+@media (max-width: 26.5625em) {
+  .news-page__title {
+    font-size: 1.675em;
+    line-height: 1.075em;
+  }
+}
+@media (max-width: 62em) {
+  .news-card {
+    flex-direction: column-reverse;
+  }
+  .news-card__img {
+    flex: 0 0 0;
+    height: 100%;
+    overflow: visible;
+  }
+  .news-card__img img {
+    width: 100%;
+  }
+  .news-card__description {
+    flex: 0 0 0;
+    gap: 10px;
+  }
+}
+/* ==========================================================================
+12. News Section CSS Area End
+========================================================================== */
+/* ==========================================================================
+13. Footer CSS Area Start
+========================================================================== */
+.footer {
+  /* &__link::after {
+      content: "";
+      background-color: var(--color-white);
+      width: 0;
+      height: 1px;
+      display: block;
+      margin-top: 1px;
+      transition: width 0.3s ease;
+  }
+  &__item:hover &__link::after {
+      width: 100%;
+      transition: width 0.3s ease;
+  } */
+}
+.footer__body {
+  padding: 50px 0;
+  background-color: var(--color-gray);
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.footer__logo {
+  width: 250px;
+}
+.footer__logo img {
+  width: 100%;
+}
+.footer__nav {
+  display: flex;
+  gap: 30px 60px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.footer__link {
+  color: var(--color-white);
+  font-size: 1.275rem;
+  line-height: 1.775rem;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.footer__item:hover .footer__link {
+  color: var(--color-blue);
+  transition: 0.3s ease;
+}
+.footer__we {
+  display: flex;
+  align-items: center;
+  gap: 40px 90px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer__follow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 230px;
+}
+.footer__follow-t {
+  color: var(--color-white);
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__follow:hover .footer__follow-links {
+  top: calc(50% - 15px);
+  transition: 0.5s;
+}
+.footer__follow:hover .footer__follow-t {
+  color: transparent;
+  transition: 0.1s;
+}
+.footer__follow:hover .footer__follow-sub {
+  color: transparent;
+  transition: 0.1s;
+}
+.footer__follow-sub {
+  color: var(--nav-hover);
+  font-size: 0.975rem;
+  line-height: 0.975rem;
+  transition: 1.2s;
+}
+.footer__follow-links {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  top: -100%;
+  transition: 0.5s;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer__contact a {
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+.footer__contact a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__contact a:hover {
+  color: var(--color-blue);
+  transition: color 0.3s ease;
+}
+
+.footer__follow-item:hover .facebook > svg {
+  transform: scale(1.25);
+  transition: transform 0.3s ease;
+}
+
+.footer__follow-item:hover .telegram > svg {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+.footer__follow-item:hover .instagram > svg {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+.facebook svg {
+  transition: transform 0.3s ease;
+}
+
+.telegram {
+  transition: transform 0.3s ease;
+}
+
+.instagram {
+  transition: transform 0.3s ease;
+}
+
+.footer-end {
+  background-color: var(--color-black);
+  padding: 20px 0;
+}
+.footer-end__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-end__text {
+  font-size: 0.975rem;
+  line-height: 0.975rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.footer-end__text a {
+  color: var(--color-blue);
+}
+
+@media (max-width: 48em) {
+  .footer__link {
+    font-size: 1.075em;
+  }
+  .footer__logo {
+    width: 200px;
+  }
+}
+@media (max-width: 31.25em) {
+  .footer-end__content {
+    position: relative;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+/* ==========================================================================
+13. Foooter CSS Area End
+========================================================================== */
+/* ==========================================================================
+14. Preloader CSS Area Start
+========================================================================== */
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1009;
+  background: #3d3c3c top/cover no-repeat;
+  visibility: visible;
+  opacity: 1;
+}
+
+.preloader .loading {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: 5px solid #198c36;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  /* border-top-color: #198c36; */
+}
+
+.preloader .loading::before,
+.preloader .loading::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.preloader .loading::before {
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  border-top: 5px solid #ff008c;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.preloader .loading::after {
+  top: 15px;
+  left: 15px;
+  bottom: 15px;
+  right: 15px;
+  border-top: 5px solid #1178ff;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+.loaded .preloader {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ==========================================================================
+14. Preloader CSS Area End
+========================================================================== */

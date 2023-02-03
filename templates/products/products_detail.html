@@ -1,0 +1,47 @@
+{% extends 'extends/layout.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %} {% trans 'Продукция' %} {% endblock title %}
+{% block page %} <a href="{% url 'home' %}">{% trans 'Главная' %}</a> <span class='intro__point'> </span><a href="{% url 'products' %}">{% trans 'Наша продукция' %}</a>{% endblock page %} 
+{% block header_title %} {% trans 'Наша продукция' %} {% endblock header_title %}
+
+    
+{% block content %}
+<section class="products-detail">
+    <div class="products-detail__container">
+        <div class="products-detail__content">
+            <h3 class="products-detail__title">{{ product.title }}</h3>
+            <div class="products-detail__block">
+                <div class="products-detail__left">
+                    <div class="products-detail__tabs">
+                        <a id="tab-title-1" onclick="changeActiveTab(1)"
+                            class="products-detail__tab products-detail__tab-active">{% trans 'Описание' %}</a>
+                        <a id="tab-title-2" onclick="changeActiveTab(2)" class="products-detail__tab">
+                            {% trans 'Детали продукции' %}</a>
+                    </div>
+                    <div class="products-detail__body">
+                        <div id="tab-body-1"
+                            class="products-detail__description products-detail__activeTab">
+                            {{ product.description | safe}}
+                        </div>
+                        <div id="tab-body-2" class="products-detail__details">
+                            {{ product.details | safe }}
+                        </div>
+                    </div>
+                </div>
+                <div class="products-detail__right">
+                    <div class="products-detail__img">
+                        <img src="{{ product.photo.url }}" alt="products">
+                    </div>
+                    <div class="products-detail__anons">
+                        <p>{{ product.anons }}</p>
+                    </div>
+                    <p class="products-detail__category">
+                        <span>{% trans 'Категория:' %}</span> {{ product.category }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

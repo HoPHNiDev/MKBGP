@@ -1,0 +1,280 @@
+# HoPHNi
+# Copyright (C) 2023 MKBGP HoPHNi
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-31 15:53+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\about.html:4 .\templates\about.html:5 .\templates\about.html:6
+#: .\templates\extends\layout.html:51 .\templates\extends\layout.html:91
+#: .\templates\includes\footer.html:12
+msgid "О нас"
+msgstr "About"
+
+#: .\templates\about.html:5 .\templates\contacts.html:5
+#: .\templates\extends\layout.html:49 .\templates\extends\layout.html:88
+#: .\templates\news\news.html:5 .\templates\news\news_detail.html:5
+#: .\templates\products\products.html:14
+#: .\templates\products\products_detail.html:5
+msgid "Главная"
+msgstr "Home"
+
+#: .\templates\about.html:14
+msgid ""
+"Совместное предприятие ООО «MKB GLOBAL POWER», было основано в 2021году в "
+"Узбекистане для удовлетворения внутренней и внешней потребности рынка в "
+"продукции, используемой в кабельной, текстильной промышленности."
+msgstr ""
+"The joint venture MKB GLOBAL POWER LLC was founded in 2021 in Uzbekistan to "
+"meet the internal and external market need for products used in the cable "
+"and textile industries."
+
+#: .\templates\about.html:15
+msgid ""
+"Производимая и реализуемая нами продукция делится на несколько категорий:"
+msgstr ""
+"The products produced and sold by us are divided into several categories:"
+
+#: .\templates\about.html:17
+msgid ""
+"Стандартные по типу и размеру продукцию (плоские, зубчатые, полуклиновые "
+"ремни, конвейерные ленты);"
+msgstr ""
+"Standard products by type and size (flat, toothed, V-shaped belts, conveyor "
+"belts);"
+
+#: .\templates\about.html:18
+msgid "Различные по диаметру стальные U-образные скобы для крепления кабеля;"
+msgstr "Various diameter steel U-shaped brackets for cable attachment;"
+
+#: .\templates\about.html:19
+msgid "Термоусадочные трубки с дополнительным слоем термоплавкого клея, предназначеные для герметичной изоляции мест соединения проводов, коррозионной защиты;"
+msgstr "Heat-shrinkable tubes with an additional layer of hot-melt glue, designed for hermetic insulation of wire junctions, corrosion protection;"
+
+
+#: .\templates\about.html:20
+msgid "Фильеры (алмазные, PSD и т.д.);"
+msgstr "Spinners (diamond, PCD, etc.);"
+
+#: .\templates\about.html:21
+msgid "Керамические глазки более 1000 разновидностей;"
+msgstr "Ceramic eyes of more than 1000 varieties;"
+
+#: .\templates\about.html:23
+msgid ""
+"Основная задача – не просто производство и реализация продукции, а решение "
+"проблем клиентов с целью достижения эффективности их производства и снижения "
+"различных затрат."
+msgstr ""
+"The main task is not just the production and sale of products, but the "
+"solution of customer problems in order to achieve the efficiency of their "
+"production and reduce various costs."
+
+#: .\templates\about.html:24
+msgid ""
+"Подобный подход, практикуемый нами практически с самого начала деятельности "
+"уже позволил обрести множество постоянных клиентов и продолжить увеличивать "
+"их список, несмотря на изменения рынка и высокую конкуренцию."
+msgstr ""
+"This approach, practiced by us almost from the very beginning of our "
+"activity, has already allowed us to find many regular customers and continue "
+"to increase their list, despite market changes and high competition."
+
+#: .\templates\about.html:25
+msgid ""
+"Существует гибкая система скидок в зависимости от объёма закупаемой "
+"продукции."
+msgstr ""
+"There is a flexible system of discounts depending on the volume of purchased "
+"products."
+
+#: .\templates\about.html:26
+msgid ""
+"В случае заинтересованности нашей продукцией мы можем предоставить Вам "
+"<span>образцы своей продукции</span>"
+msgstr ""
+"If you are interested in our products, we can provide you with <span>samples "
+"of our products</span>"
+
+#: .\templates\contacts.html:4 .\templates\contacts.html:5
+#: .\templates\contacts.html:6 .\templates\contacts.html:16
+#: .\templates\extends\layout.html:53 .\templates\extends\layout.html:95
+#: .\templates\includes\footer.html:14
+msgid "Контакты"
+msgstr "Contacts"
+
+#: .\templates\contacts.html:24
+msgid "Узбекистан, Ташкентская область, Куйичирчикский район"
+msgstr "Uzbekistan, Tashkent region, Kuyichirchik district"
+
+#: .\templates\extends\layout.html:50 .\templates\extends\layout.html:90
+#: .\templates\includes\footer.html:11 .\templates\products\products.html:4
+#: .\templates\products\products_detail.html:4
+msgid "Продукция"
+msgstr "Products"
+
+#: .\templates\extends\layout.html:52 .\templates\extends\layout.html:93
+#: .\templates\includes\footer.html:13 .\templates\news\news.html:4
+#: .\templates\news\news.html:5 .\templates\news\news.html:6
+#: .\templates\news\news_detail.html:4 .\templates\news\news_detail.html:5
+#: .\templates\news\news_detail.html:6
+msgid "Новости"
+msgstr "News"
+
+#: .\templates\includes\footer.html:19
+msgid "Подписаться на нас"
+msgstr "Follow us"
+
+#: .\templates\includes\footer.html:20
+msgid "Наведите"
+msgstr "Hover"
+
+#: .\templates\includes\form.html:13
+msgid "Оставьте заявку"
+msgstr "Leave a request"
+
+#: .\templates\includes\form.html:14
+msgid "Наш оператор свяжется с вами в ближайшее время"
+msgstr "Our operator will contact you soon"
+
+#: .\templates\includes\form.html:20
+msgid "Ваше имя:"
+msgstr "Your name:"
+
+#: .\templates\includes\form.html:68
+msgid "Введите ваше имя"
+msgstr "Enter your name"
+
+#: .\templates\includes\form.html:72
+msgid "Ваш телефон:"
+msgstr "Your phone number"
+
+#: .\templates\includes\form.html:83
+msgid "Введите ваш телефон"
+msgstr "Entry your phone number"
+
+#: .\templates\includes\form.html:86
+msgid "Отправить"
+msgstr "Send"
+
+#: .\templates\includes\home_products.html:9
+#: .\templates\products\products.html:14 .\templates\products\products.html:15
+#: .\templates\products\products_detail.html:5
+#: .\templates\products\products_detail.html:6
+msgid "Наша продукция"
+msgstr "Our products"
+
+#: .\templates\includes\home_products.html:23
+msgid "Посмотреть всю продукцию"
+msgstr "View all products"
+
+#: .\templates\includes\last_article.html:9 .\templates\news\news.html:13
+msgid "Новости и важные события"
+msgstr "News and important events"
+
+#: .\templates\includes\last_article.html:22 .\templates\news\news.html:27
+msgid "Читать"
+msgstr "Read"
+
+#: .\templates\includes\last_article.html:27
+msgid "Читать ещё"
+msgstr "Read more"
+
+#: .\templates\index.html:4
+msgid "Домашняя страница"
+msgstr "Home Page"
+
+#: .\templates\index.html:6
+msgid "Поставщик для кабельной промышленности №1 в Узбекистане"
+msgstr "Supplier №1 for the cable industry in Uzbekistan"
+
+#: .\templates\index.html:10
+msgid "С"
+msgstr "S"
+
+#: .\templates\index.html:11
+msgid "К"
+msgstr "C"
+
+#: .\templates\index.html:12
+msgid "Р"
+msgstr "R"
+
+#: .\templates\index.html:13
+msgid "О"
+msgstr "O"
+
+#: .\templates\index.html:14
+msgid "Л"
+msgstr "L"
+
+#: .\templates\index.html:15
+msgid "Ь"
+msgstr "L"
+
+#: .\templates\index.html:29
+msgid "Оперативная работа с клиентами"
+msgstr "Operational work with clients"
+
+#: .\templates\index.html:35
+msgid "Вы оставляете заявку"
+msgstr "You leave a request"
+
+#: .\templates\index.html:41
+msgid "Мы оформляем заказ"
+msgstr "We register an order"
+
+#: .\templates\index.html:47
+msgid "Вы получаете вашу продукцию"
+msgstr "You receive your products"
+
+#: .\templates\index.html:51
+msgid "Оставить заявку"
+msgstr "Leave a request"
+
+#: .\templates\index.html:60
+msgid "Мы ценим наши отношения"
+msgstr "We value our relationship"
+
+#: .\templates\index.html:62
+msgid ""
+"Даже несмотря на то, что мы являемся молодым совместным предприятием, нам "
+"уже есть чем гордится - мы уже успели завоевать сердца многих компаний в "
+"сфере <span>кабельной и текстильной промышленности...</span>."
+msgstr ""
+"Even though we are a young joint venture, we already have something to be "
+"proud of - we have already managed to win the hearts of many companies in "
+"the <span>cable and textile industries...</span>."
+
+#: .\templates\news\news.html:35 .\templates\products\products.html:36
+msgid "Загрузить ещё"
+msgstr "Download more"
+
+#: .\templates\news\news_detail.html:21
+msgid "Поделится:"
+msgstr "Share:"
+
+#: .\templates\products\products_detail.html:18
+msgid "Описание"
+msgstr "Description"
+
+#: .\templates\products\products_detail.html:20
+msgid "Детали продукции"
+msgstr "Product details"
+
+#: .\templates\products\products_detail.html:40
+msgid "Категория:"
+msgstr "Category:"

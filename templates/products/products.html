@@ -1,0 +1,40 @@
+{% extends 'extends/layout.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %} {% trans 'Продукция' %} {% endblock title %}
+
+{% block css %}
+    <style>
+        .intro__title::after {
+            content: url({% static '/img/title-bottom-white.svg' %}) !important;
+        }
+    </style>
+{% endblock css %}
+    
+{% block page %} <a href="{% url 'home' %}">{% trans 'Главная' %}</a> <span class='intro__point'> </span><a href="{% url 'products' %}">{% trans 'Наша продукция' %}</a>{% endblock page %} 
+{% block header_title %} {% trans 'Наша продукция' %} {% endblock header_title %}
+
+        
+{% block content %}
+            <section class="products" id="products">
+                <div class="products__container">
+                    <div class="products__content">
+                        <div class="products__block">
+                        {% for product in products %}
+                            <a href="{% if product.hasDescription %}{% url 'products_view' product.slug %}{% else %}#{% endif %}" class="products__card">
+                                <div class="products__img">
+                                    <img src="{{ product.photo.url }}" alt="">
+                                </div>
+                                <div class="products__description">
+                                    <h3 href="#" class="products__card-title">{{ product.title }}</h3>
+                                </div>
+                            </a>
+                        {% endfor %}
+                        </div>
+                        {% if products_status %}
+                        <button class="products__button" id='products_download' all='{{ count }}'>{% trans 'Загрузить ещё' %}</button>
+                        {% endif %}
+                        </div>
+                </div>
+            </section>
+{% endblock content %}

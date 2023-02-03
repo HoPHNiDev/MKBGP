@@ -1,0 +1,89 @@
+{% extends 'extends/layout.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %} {% trans 'Домашняя страница' %} {% endblock title %}
+{% block page %} MKB GLOBAL POWER {% endblock page %}
+{% block header_title %} {% trans 'Поставщик для кабельной промышленности №1 в Узбекистане' %} {% endblock header_title %}
+{% block header_scroll %}
+    <div class="intro__scroll intro-scroll">
+        <span class="intro-scroll__content">
+            <span class="intro-scroll__text intro-scroll__text_1">{% trans 'С' %}</span>
+            <span class="intro-scroll__text intro-scroll__text_2">{% trans 'К' %}</span>
+            <span class="intro-scroll__text intro-scroll__text_3">{% trans 'Р' %}</span>
+            <span class="intro-scroll__text intro-scroll__text_4">{% trans 'О' %}</span>
+            <span class="intro-scroll__text intro-scroll__text_5">{% trans 'Л' %}</span>
+            <span class="intro-scroll__text intro-scroll__text_6">{% trans 'Ь' %}</span>
+        </span>
+        <span class="intro-scroll__line"></span>
+        <a href="#products" class="intro-scroll__mouse"></a>
+    </div>
+{% endblock header_scroll %}
+        
+        
+{% block content %}
+    {% include 'includes/home_products.html' %}
+    <section class="clients">
+        <div class="clients__wrapper">
+            <div class="clients__container">
+                <div class="clients__content">
+                    <h3 class="clients__titlerev">{% trans 'Оперативная работа с клиентами' %}</h3>
+                    <div class="clients__body">
+                        <div class="clients__item">
+                            <div class="clients__img clients__img-first">
+                                <img src="{% static 'img/main/clients/request.svg' %}" alt="">
+                            </div>
+                            <p class="clients__text">{% trans 'Вы оставляете заявку' %}</p>
+                        </div>
+                        <div class="clients__item">
+                            <div class="clients__img clients__img-second">
+                                <img src="{% static 'img/main/clients/hand-shake.svg' %}" alt="">
+                            </div>
+                            <p class="clients__text">{% trans 'Мы оформляем заказ' %}</p>
+                        </div>
+                        <div class="clients__item">
+                            <div class="clients__img clients__img-third">
+                                <img src="{% static 'img/main/clients/delivery.svg' %}" alt="">
+                            </div>
+                            <p class="clients__text">{% trans 'Вы получаете вашу продукцию' %}</p>
+                        </div>
+                    </div>
+                    <button onclick="formOpen()" class="clients__button"><img src="{% static 'img/phone.svg' %}"
+                            alt="phone">{% trans 'Оставить заявку' %}</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'includes/last_article.html' %}
+    <section class=" partners">
+        <div class="partners__container">
+            <div class="partners__content">
+                <h3 class="partners__title">{% trans 'Мы ценим наши отношения' %}</h3>
+                <p class="partners__subtitle">
+                    {% trans 'Даже несмотря на то, что мы являемся молодым совместным предприятием, нам уже есть чем гордится - мы уже успели завоевать сердца многих компаний в сфере <span>кабельной и текстильной промышленности...</span>.' %}
+                </p>
+                <div class="slidebar">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="https://artikul-kabel.uz/"
+                                    class="swiper__company"><img src="{% static 'img/main/partners/artikul-aziya.svg' %}"
+                                        alt=""></a>
+                            </div>
+                            <div class="swiper-slide"><a href="#" class="swiper__company"><img
+                                        src="{% static 'img/main/partners/Hascelik.png' %}" alt=""></a></div>
+                            <div class="swiper-slide"><a href="https://kabeltech.uz/"
+                                    class="swiper__company"><img src="{% static 'img/main/partners/Kabeltech.png' %}"
+                                        alt=""></a></div>
+                            <div class="swiper-slide"><a href="https://uzkabel.uz/" class="swiper__company"><img
+                                        src="{% static 'img/main/partners/UZKABEL.png' %}" alt=""></a></div>
+                            <div class="swiper-slide"><a href="#" class="swiper__company"><img
+                                        src="{% static 'img/main/partners/goldagi.png' %}" alt=""></a></div>
+                            <div class="swiper-slide"><a href="https://www.procab.uz/"
+                                    class="swiper__company"><img src="{% static 'img/main/partners/procab.svg' %}" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

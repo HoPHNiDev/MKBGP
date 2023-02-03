@@ -1,0 +1,35 @@
+{% extends 'extends/layout.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %} {% trans 'Новости' %} {% endblock title %}
+{% block page %} <a href="{% url 'home' %}">{% trans 'Главная' %}</a> <span class='intro__point'> </span><a href="{% url 'news' %}">{% trans 'Новости' %}</a>{% endblock page %} 
+{% block header_title %} {% trans 'Новости' %} {% endblock header_title %}
+        
+        
+{% block content %}
+<section class="news-page">
+    <div class="news-page__container">
+        <div class="news-page__content">
+            <h3 class="news-page__title">{{ article.title }}</h3>
+            <p class="news-card__type">{{ article.article_type }}</p>
+            <p class="news-card__date"><span><img src="{% static 'img/news/date.svg' %}" alt=""></span>{{ article.created_at|date:"d" }}.{{ article.created_at|date:"m" }}.{{ article.created_at|date:"Y" }}</p>
+            <div class="news-page__text">
+                {{ article.text|safe }}
+            </div>
+            <div class="news-page__img"><img src="{{ article.photo.url }}" alt="news-img"></div>
+            <div class="news-page__share">
+                <p class="news-page__share-title">{% trans 'Поделится:' %}</p>
+                <ul class="news-page__social">
+                    <p style='display: none;' id='social-title'>{{ article.title }}</p>
+                    <li class="news-page__item"><a id='vk' href="#" class="news-page__link"><img
+                                src="{% static 'img/social-icons/vk.svg' %}" alt=""></a></li>
+                    <li class="news-page__item"><a id='twitter' href="#" class="news-page__link"><img
+                                src="{% static 'img/social-icons/twitter.svg' %}" alt=""></a></li>
+                    <li class="news-page__item"><a id='ok' href="" class="news-page__link"><img
+                                src="{% static 'img/social-icons/ok.svg' %}" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
