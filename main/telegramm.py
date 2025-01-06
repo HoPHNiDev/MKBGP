@@ -1,11 +1,8 @@
 import telebot
 
-token = '5943512620:AAFSladkS80Tvhc45i4mVCr2ZumOo5y_X2c'
-user_id = -1001822113373
+token = '' #Token of the bot from @BotFather
+user_id = 1 #User ID of the reciever, it could be user/chat/channel
 bot = telebot.TeleBot(token)
-
-# 1002820269
-
 
 def send_message(text):
     try:
